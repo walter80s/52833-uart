@@ -190,6 +190,7 @@ static void app_set_data_process(void)
     Room_Info_Set_Pack_Def *p_data   = (Room_Info_Set_Pack_Def *)m_tmp_buf;
     uint16_t                tmp_data = 0;
     NRF_LOG_INFO("processed_itm=%d len=%d", processed_itm,sizeof(Room_Info_Set_Pack_Def));
+    m_cmd_statu = CMD_IDLE;
     switch (processed_itm) {
         case ROOM_CMD_SET_POWER:
             processed_itm = ROOM_CMD_SET_TEMP;
