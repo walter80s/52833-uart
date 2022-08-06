@@ -95,7 +95,6 @@ static void ble_stack_init(void)
     APP_ERROR_CHECK(nrf_sdh_ble_default_cfg_set(1, &ram_start));
     APP_ERROR_CHECK(nrf_sdh_ble_enable(&ram_start));
     NRF_SDH_BLE_OBSERVER(m_ble_observer, 2, ble_evt_handler, NULL);
-    APP_ERROR_CHECK(sd_power_dcdc_mode_set(NRF_POWER_DCDC_ENABLE));
 }
 
 /**
